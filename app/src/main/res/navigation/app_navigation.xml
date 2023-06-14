@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@+id/navigation_map">
+
+    <fragment
+        android:id="@+id/navigation_map"
+        android:name="com.deviz.couponhunter.ui.fragment.MapViewFragment"
+        android:label="@string/title_map"
+        tools:layout="@layout/fragment_map_view" />
+
+    <fragment
+        android:id="@+id/navigation_coupon_list"
+        android:name="com.deviz.couponhunter.ui.fragment.CouponListFragment"
+        android:label="@string/title_coupon_list"
+        tools:layout="@layout/fragment_coupon_list" />
+
+    <fragment
+        android:id="@+id/navigation_shop_list"
+        android:name="com.deviz.couponhunter.ui.fragment.ShopListFragment"
+        android:label="@string/title_shop_list"
+        tools:layout="@layout/fragment_shop_list" />
+
+    <fragment
+        android:id="@+id/navigation_additional_info"
+        android:name="com.deviz.couponhunter.ui.fragment.AdditionalInfoFragment"
+        android:label="@string/title_additional_info"
+        tools:layout="@layout/fragment_additional_info" />
+</navigation>

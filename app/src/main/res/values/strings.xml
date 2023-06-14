@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CouponHunter</string>
+    <string name="title_map">Map</string>
+    <string name="title_coupon_list">My Coupon</string>
+    <string name="title_shop_list">My Shop</string>
+    <string name="title_additional_info">Additional</string>
 </resources>
