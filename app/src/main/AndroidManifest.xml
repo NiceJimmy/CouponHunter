@@ -18,6 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="31">
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="1aww6x7kb5" />
         <activity
             android:name=".ui.activity.MainActivity"
             android:exported="true"

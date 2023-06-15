@@ -17,18 +17,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="146dp"
-            android:layout_height="124dp"
-            android:layout_marginStart="145dp"
-            android:layout_marginTop="276dp"
-            android:layout_marginEnd="120dp"
-            android:layout_marginBottom="331dp"
-            android:text="지도화면"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <fragment
+            android:id="@+id/map_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.naver.maps.map.MapFragment" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
