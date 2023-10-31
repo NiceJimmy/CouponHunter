@@ -3,7 +3,6 @@ package com.deviz.couponhunter.ui.fragment
 import com.deviz.couponhunter.R
 import com.deviz.couponhunter.base.BaseFragment
 import com.deviz.couponhunter.databinding.FragmentShopListBinding
-import com.deviz.couponhunter.viewmodel.ShopListViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

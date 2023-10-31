@@ -2,10 +2,6 @@ package com.deviz.couponhunter.ui.activity
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
 import com.deviz.couponhunter.R
 import com.deviz.couponhunter.base.BaseActivity
 import com.deviz.couponhunter.databinding.ActivityMainBinding
@@ -13,12 +9,13 @@ import com.deviz.couponhunter.ui.fragment.AdditionalInfoFragment
 import com.deviz.couponhunter.ui.fragment.CouponListFragment
 import com.deviz.couponhunter.ui.fragment.MapViewFragment
 import com.deviz.couponhunter.ui.fragment.ShopListFragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
+import timber.log.Timber
 
 @AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>() {
 
+    //각 프래그먼트가 실제로 필요할 때까지 메모리에 로드 안됨. 상태유지 이슈 고려.
     private val mapViewFragment by lazy { MapViewFragment() }
     private val couponListFragment by lazy { CouponListFragment() }
     private val shopListFragment by lazy { ShopListFragment() }
@@ -28,7 +25,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
 
