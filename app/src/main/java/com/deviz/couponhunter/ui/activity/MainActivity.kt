@@ -40,8 +40,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                         changeFragment(couponListFragment)
 //                        navController.navigate(R.id.navigation_coupon_list)
                     }
+
                     R.id.navigation_shop_list -> {
                         changeFragment(shopListFragment)
+                        //                      navController.navigate(R.id.navigation_coupon_list)
                     }
                     R.id.navigation_additional_info -> {
                         initNavigationDrawer()
