@@ -11,6 +11,7 @@ import com.deviz.couponhunter.R
 import com.deviz.couponhunter.base.BaseFragment
 import com.deviz.couponhunter.databinding.FragmentMapViewBinding
 import com.deviz.couponhunter.viewmodel.MapViewModel
+import com.naver.maps.geometry.LatLng
 import com.naver.maps.map.MapFragment
 import com.naver.maps.map.NaverMap
 import com.naver.maps.map.overlay.Marker
@@ -32,9 +33,30 @@ class MapViewFragment : BaseFragment<FragmentMapViewBinding>() {
         val mapFragment = childFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment
         mapFragment.getMapAsync {
             naverMap = it
+            setupMarkers()
         }
     }
 
+    private fun setupMarkers() {
+        val locations = listOf(
+            LatLng(37.5663, 126.9779)
+        )
+        locations.forEach { location ->
+            val marker = Marker().apply {
+                position = location
+                map = naverMap
+            }
+            marker.setOnClickListener {
+                showBottomSheet(marker)
+                true
+            }
+        }
+    }
+
+    private fun showBottomSheet(marker: Marker) {
+        val bottomSheetFragment = ShopInfoBtmFragment.newInstance(marker.position.latitude, marker.position.longitude)
+        bottomSheetFragment.show(childFragmentManager, bottomSheetFragment.tag)
+    }
 
     override fun onResume() {
         super.onResume()
