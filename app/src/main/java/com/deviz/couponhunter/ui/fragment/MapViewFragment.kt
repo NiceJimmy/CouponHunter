@@ -47,14 +47,14 @@ class MapViewFragment : BaseFragment<FragmentMapViewBinding>() {
                 map = naverMap
             }
             marker.setOnClickListener {
-                showBottomSheet(marker)
+                showBottomSheet()
                 true
             }
         }
     }
 
-    private fun showBottomSheet(marker: Marker) {
-        val bottomSheetFragment = ShopInfoBtmFragment.newInstance(marker.position.latitude, marker.position.longitude)
+    private fun showBottomSheet() {
+        val bottomSheetFragment = ShopInfoBtmFragment.newInstance()
         bottomSheetFragment.show(childFragmentManager, bottomSheetFragment.tag)
     }
 
